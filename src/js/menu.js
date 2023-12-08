@@ -6,6 +6,7 @@ const fondo = document.querySelector("#fondo")
 const close_menu_icon = document.querySelector("#close-menu")
 const arrows = document.querySelectorAll(".arrow")
 const menu_texts = document.querySelectorAll(".menu_text")
+const dropdown_texts = document.querySelectorAll(".dropdown-text")
 
 const close_menu = () => {
   fondo.style.height = "0"
@@ -35,6 +36,34 @@ const rotate_arrow = (element) => {
   }
 }
 
+const show_dropdown = (dropdown) => {
+  dropdown.style.opacity = "1"
+  dropdown.style.maxHeight = "fit-content"
+}
+
+const hidden_menu = (dropdown) => {
+  dropdown.style.maxHeight = "0"
+  dropdown.style.opacity = "0"
+}
+
+const toggle_dropdown = (dropdown_clickable) => {
+  let dropdown
+  let dropdown_text
+  if (dropdown_clickable.classList.contains("dropdown-arrow")){
+    dropdown = dropdown_clickable.nextElementSibling
+    dropdown_text = dropdown_clickable.previousElementSibling
+  }else{
+    dropdown = dropdown_clickable.nextElementSibling.nextElementSibling
+    dropdown_text = dropdown_clickable
+  }
+  dropdown_text.classList.toggle("active")
+  if (dropdown_text.classList.contains("active")){
+    show_dropdown(dropdown)
+  }else {
+    hidden_menu(dropdown)
+  }
+}
+
 menu.addEventListener("click", open_menu)
 
 close_menu_icon.addEventListener("click", close_menu)
@@ -50,5 +79,11 @@ arrows.forEach(arrow_icon => {
 menu_texts.forEach(menu_text => {
   menu_text.addEventListener("click", () => {
     rotate_arrow(menu_text)
+  })
+})
+
+dropdown_texts.forEach(dropdown_text => {
+  dropdown_text.addEventListener("click", () => {
+    toggle_dropdown(dropdown_text)
   })
 })

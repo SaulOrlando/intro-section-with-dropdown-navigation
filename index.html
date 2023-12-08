@@ -79,23 +79,67 @@
     </nav>
     <div class="bg-almost-black z-10 absolute inset-0 transition-all h-0 opacity-80" id="fondo"></div>
     <nav class="flex justify-between py-6 px-4">
-      <img src="./images/logo.svg" alt="logo">
-      <img src="./images/icon-menu.svg" alt="menu" id="menu" class="cursor-pointer">
+      <section class="flex items-center gap-5">
+        <img src="./images/logo.svg" alt="logo">
+        <nav class="hidden gap-3 text-medium-gray font-medium sm:flex">
+          <article class="flex items-center gap-[1px] relative">
+            <p class="menu_text dropdown-text">Features</p>
+            <img src="./images/icon-arrow-down.svg" alt="arrow down" class="arrow dropdown-text dropdown-arrow">
+            <ul
+              class="absolute top-full flex-col flex right-0 bg-almost-white px-6 gap-4 shadow-xl shadow-medium-gray py-6 rounded-xl opacity-0 max-h-0">
+              <li class="flex gap-4 items-center">
+                <img src="./images/icon-todo.svg" alt="icon todo">
+                <p>Todo List</p>
+              </li>
+              <li class="flex gap-4 items-center">
+                <img src="./images/icon-calendar.svg" alt="icon calendar">
+                <p>Calendar</p>
+              </li>
+              <li class="flex gap-4 items-center">
+                <img src="./images/icon-reminders.svg" alt="icon reminders">
+                <p>Reminders</p>
+              </li>
+              <li class="flex gap-4 items-center">
+                <img src="./images/icon-planning.svg" alt="icon planning">
+                <p>Planning</p>
+              </li>
+            </ul>
+          </article>
+          <article class="flex items-center gap-[1px] relative">
+            <p class="menu_text dropdown-text">Company</p>
+            <img src="./images/icon-arrow-down.svg" alt="arrow down" class="arrow dropdown-arrow dropdown-text">
+            <ul
+              class="flex absolute flex-col left-0 bg-almost-white px-6 gap-4 shadow-xl shadow-medium-gray py-6 rounded-xl w-max top-full transition-all opacity-0 max-h-0">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </article>
+          <article>Careers</article>
+          <article>About</article>
+        </nav>
+      </section>
+      <img src="./images/icon-menu.svg" alt="menu" id="menu" class="cursor-pointer sm:hidden">
+      <section class="hidden text-medium-gray font-medium sm:flex gap-3">
+        <button class="px-2 py-1">Login</button>
+        <button class="border-2 border-medium-gray px-2 py-1 rounded-2xl">Register</button>
+      </section>
     </nav>
-    <main class="flex flex-col gap-12">
+    <main class="flex flex-col gap-12 sm:flex-row sm:gap-14 sm:ml-14 sm:mr-10 sm:mt-5">
       <picture>
+        <source srcset="./images/image-hero-desktop.png" media="(width >= 640px)">
         <img src="./images/image-hero-mobile.png" alt="hero">
       </picture>
-      <section class="flex flex-col">
-        <h1 class="font-bold text-3xl text-center">Make remote work</h1>
-        <p class="text-medium-gray text-center my-8 mx-5">
+      <section class="flex flex-col sm:-order-1 text-center mx-0 sm:text-left sm:mx-5">
+        <h1 class="font-bold text-3xl">Make remote work</h1>
+        <p class="text-medium-gray my-8 sm:mx-0">
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
         </p>
-        <button class="bg-almost-black py-4 px-6 text-almost-white w-fit m-auto rounded-2xl">
+        <button class="bg-almost-black py-4 px-6 text-almost-white w-fit m-auto rounded-2xl sm:m-0">
           Learn more
         </button>
-        <footer class="flex mt-12 mb-24 justify-between">
+        <footer class="flex mt-12 mb-24 justify-around sm:flex-wrap sm:gap-10">
           <img src="./images/client-databiz.svg" alt="logo client-databiz" class="h-5">
           <img src="./images/client-audiophile.svg" alt="logo client-audiophile">
           <img src="./images/client-meet.svg" alt="logo client-meet" class="h-5">
@@ -103,12 +147,12 @@
         </footer>
       </section>
     </main>
-    <address class="text-center font-bold mb-24">
+    <address class="text-center font-bold mb-24 text-medium-gray">
       Desafío de <a href="https://www.frontendmentor.io/home" target="_blank"
-        class="text-medium-gray hover:underline">Frontend Mentor</a>
+        class="text-almost-black hover:underline">Frontend Mentor</a>
       <br>
       Codificado por <a href="https://github.com/SaulOrlando" target="_blank"
-        class="text-medium-gray hover:underline">Salando</a>
+        class="text-almost-black hover:underline">Salando</a>
     </address>
   </article>
   <script src="./src/js/menu.js"></script>

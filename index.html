@@ -79,10 +79,10 @@
     </nav>
     <div class="bg-almost-black z-10 absolute inset-0 transition-all h-0 opacity-80" id="fondo"></div>
     <nav class="flex justify-between py-6 px-4">
-      <section class="flex items-center gap-5">
+      <section class="flex items-center gap-5 md:gap-8">
         <img src="./images/logo.svg" alt="logo">
-        <nav class="hidden gap-3 text-medium-gray font-medium sm:flex">
-          <article class="flex items-center gap-[1px] relative">
+        <nav class="hidden gap-3 text-medium-gray font-medium sm:flex md:gap-5">
+          <article class="flex items-center gap-[1px] relative md:gap-[2px]">
             <p class="menu_text dropdown-text cursor-pointer transition-colors hover:text-almost-black">Features</p>
             <img src="./images/icon-arrow-down.svg" alt="arrow down" class="arrow dropdown-text dropdown-arrow">
             <ul
@@ -105,7 +105,7 @@
               </li>
             </ul>
           </article>
-          <article class="flex items-center gap-[1px] relative">
+          <article class="flex items-center gap-[1px] relative md:gap-[2px]">
             <p class="menu_text dropdown-text cursor-pointer transition-colors hover:text-almost-black">Company</p>
             <img src="./images/icon-arrow-down.svg" alt="arrow down" class="arrow dropdown-arrow dropdown-text">
             <ul
@@ -120,18 +120,18 @@
         </nav>
       </section>
       <img src="./images/icon-menu.svg" alt="menu" id="menu" class="cursor-pointer sm:hidden">
-      <section class="hidden text-medium-gray font-medium sm:flex gap-3">
-        <button class="px-2 py-1 cursor-pointer transition-colors hover:text-almost-black">Login</button>
-        <button class="border-2 border-medium-gray px-2 py-1 rounded-2xl cursor-pointer transition-colors hover:text-almost-black hover:border-almost-black">Register</button>
+      <section class="hidden text-medium-gray font-medium sm:flex gap-3 md:gap-5">
+        <button class="px-2 py-1 cursor-pointer transition-colors hover:text-almost-black md:px-3 md:py-2">Login</button>
+        <button class="border-2 border-medium-gray px-2 py-1 rounded-2xl cursor-pointer transition-colors hover:text-almost-black hover:border-almost-black md:px-3 md:py-2">Register</button>
       </section>
     </nav>
-    <main class="flex flex-col gap-12 sm:flex-row sm:gap-14 sm:ml-14 sm:mr-10 sm:mt-5">
+    <main class="flex flex-col gap-12 sm:flex-row sm:gap-14 sm:ml-14 sm:mr-10 sm:mt-5 md:ml-20 md:mr-16 md:mt-8 md:gap-20">
       <picture>
         <source srcset="./images/image-hero-desktop.png" media="(width >= 640px)">
         <img src="./images/image-hero-mobile.png" alt="hero">
       </picture>
       <section class="flex flex-col sm:-order-1 text-center mx-0 sm:text-left sm:mx-5">
-        <h1 class="font-bold text-3xl">Make remote work</h1>
+        <h1 class="font-bold text-3xl md:text-6xl">Make remote work</h1>
         <p class="text-medium-gray my-8 sm:mx-0">
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.

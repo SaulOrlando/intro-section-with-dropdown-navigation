@@ -24,8 +24,6 @@ Es algo en lo que tengo que ir mejorando.
 
 #### Mobile
 
-375px
-
 ##### Sin Menú
 
 ![Mobile](./../screenshots/mobile.png)
@@ -35,8 +33,6 @@ Es algo en lo que tengo que ir mejorando.
 ![Mobile con menu](./../screenshots/mobile-con-menu.png)
 
 #### Desktop
-
-1440px
 
 ##### Sin Menús
 
